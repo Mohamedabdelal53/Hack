@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  bug_hunting:
+    build:
+      context: .
+    container_name: bug_hunting
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./scripts:/app/scripts
+    networks:
+      - bug_net
+    entrypoint: ["/bin/bash"]
+
+networks:
+  bug_net:
+    driver: bridge
