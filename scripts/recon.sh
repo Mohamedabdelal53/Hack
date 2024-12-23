@@ -12,11 +12,11 @@ fi
 
 # 1. Subdomain Enumeration
 echo "[*] Starting subdomain enumeration..."
-./subdomainenum.sh $TARGET
+./subdomain_enum.sh $TARGET
 
 # 2. Subdomain Takeover
 echo "[*] Starting subdomain takeover check..."
-./subdomain_enum.sh 
+./subdomain_takeover.sh 
 
 # 3. HTTPX - Scan live subdomains
 echo "[*] Starting HTTPX scan..."
